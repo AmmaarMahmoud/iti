@@ -1,0 +1,57 @@
+<select class="form-select mt-3" aria-label="Default select example" [(ngModel)]="SelectedcatID">
+    <option value="0" selected>All</option>
+    <option value="1">laptob</option>
+    <option value="2">phone</option>
+    <option value="3">cares</option>
+</select>
+<hr class="border border-dark">
+<app-product-list [sint]="SelectedcatID" (Tprice)="ChangeCatId($event)"></app-product-list>
+<hr class="border border-dark">
+<div class="my-4">
+    <h6>Enter your name:</h6>
+    <input #ClientNameInp type="text"  class="form-control">
+</div>
+
+<h3>Totel price is:{{reverseoutput}}</h3>
+<!-- <button type="button" class="btn btn-danger" (click)="ChangeQuantity()">Button</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>Create your Order</h2>
+<select class="form-select" aria-label="Default select example" [(ngModel)]="SelectedcatID">
+    <option selected value="0">All</option>
+    <option *ngFor="let cat of catlist" [value]="cat.id">{{cat.name}}</option>
+</select>
+<hr>
+<div class="bg-success">
+    <app-product-list [SentcatID]="SelectedcatID" (TotlePriceChange)="onTotlePriceChange($event)"></app-product-list>
+</div>
+<hr>
+<h3>
+    [To By Remove] for test <br>
+    Order Totle Price:{{recivedOrdertotleprice}}
+</h3> -->

@@ -1,0 +1,17 @@
+<!-- <p>product-details works!</p> -->
+<!-- {{prd|json}} -->
+<div class="card" style="width: 18rem;">
+    <img [src]="prd?.imgURL" class="card-img-top" alt="Image">
+    <div class="card-body">
+      <h5 class="card-title">{{prd?.name}}</h5>
+      <div class="card-text">
+        <div>PRICE: {{prd?.price}}</div>
+        <div>QUANTITY: {{prd?.quantity}}</div>
+      </div>
+      <div>
+        <button class="btn btn-primary" (click)="backto()">BackTo</button>
+        <button [disabled]="currprdID==PrdIDsArr[0]" class="btn btn-primary" (click)="Prdpriv()">privase</button>
+        <button [disabled]="currprdID==PrdIDsArr[PrdIDsArr.length-1]" class="btn btn-primary" (click)="Prdnext()">Next</button>
+      </div>
+    </div>
+</div>
